@@ -1,22 +1,45 @@
+% color
+\definecolor{frametitlecolor}{rgb}{0.275,0.275,0.325}
+\definecolor{framesubtitlecolor}{rgb}{0.324,0.422,0.504}
+\definecolor{frameseparatorboxcolor}{rgb}{0.447,0.486,0.639}
+
 \mode<presentation>
 
 % Frame title
-\defbeamertemplate*{frametitle}{nist}[1][]
-{
-\vskip1cm%
-  \begin{beamercolorbox}[wd=\paperwidth,ht=1.2cm]{frametitle}
-  \begin{tikzpicture}
-  \useasboundingbox[fill=white](0,0) rectangle(\the\paperwidth,1.2);
-  \fill[orange] (0,0) rectangle(2.95,1.2);
-  \fill[blue!50!cyan!80] (3.05,0) rectangle(\the\paperwidth,1.2);
-   \ifx\insertframesubtitle\@empty%
-      {\node[anchor=west, white,font=\large] at (3.2,0.61){\insertframetitle};}
-      \else%
-      {\node[anchor= west, white,font=\large] at (3.2,0.81){\insertframetitle};%
-       \node[anchor= west, white,font=\small] at (3.2,0.41){\insertframesubtitle};}%
-      \fi
-  \end{tikzpicture}
+\defbeamertemplate*{frametitle}{nist}[1][]{
+  \begin{beamercolorbox}[wd=\paperwidth,ht=1.2cm,center]{frametitle}
+    \begin{tikzpicture}
+     \ifx\insertframesubtitle\@empty%
+        {\node[anchor=west,frametitlecolor,font=\large] at (0,0.61){\insertframetitle};}
+        \else%
+        {\node[anchor=west,frametitlecolor,font=\large] at (0,0.81){\insertframetitle};%
+         \node[anchor=west,framesubtitlecolor,font=\small] at (0,0.41){\insertframesubtitle};}%
+        \fi
+    \fill[frameseparatorboxcolor] (0,0) rectangle(\the\paperwidth-20,0.01);
+    \end{tikzpicture}
   \end{beamercolorbox}
+}
+
+\defbeamertemplate*{footline}{infolines theme}
+{
+  \leavevmode%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=0cm,center]{frametitle}%
+    \begin{tikzpicture}
+      \fill[frameseparatorboxcolor] (0,0) rectangle(\the\paperwidth-20,0.01);
+    \end{tikzpicture}
+  \end{beamercolorbox}
+  \vskip2pt%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,left]{author in head/foot}%
+    \hspace*{2em}\usebeamerfont{date in head/foot}\usebeamercolor[frametitlecolor]{}\insertshortdate{}
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+    \usebeamercolor[frametitlecolor]{}\insertframenumber{} / \inserttotalframenumber\hspace*{2em}
+  \end{beamercolorbox}}%
+  \vskip2pt%
 }
 
 \mode<all>
