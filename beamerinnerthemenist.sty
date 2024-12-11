@@ -1,0 +1,41 @@
+% colors
+\definecolor{titleboxcolor}{rgb}{0.447,0.486,0.639}
+\definecolor{subtitleboxcolor}{rgb}{0.624,0.722,0.804}
+
+\mode<presentation>
+
+\setbeamertemplate{background}{
+  \begin{tikzpicture}
+  \useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
+  % title box
+  \fill[color=titleboxcolor] (1.6,5) rectangle (14.5,3.4);
+  \fill[color=white] (2,4.98) rectangle (14.48,3.42);
+  % sub title box
+  \fill[color=subtitleboxcolor] (1.6,3.26) rectangle (14.5,2.4);
+  \fill[color=white] (2,3.24) rectangle (14.48,2.42);
+  \ifnum\thepage>1\relax%
+   \fill[white,opacity=1] (0,0) rectangle(\the\paperwidth,\the\paperheight);
+   \fi
+  \end{tikzpicture}
+}
+
+% Title page
+\defbeamertemplate*{title page}{nist}[1][]
+{
+    \begin{beamercolorbox}[sep=0cm,dp=0cm,wd=13.2cm,ht=4.0cm,right,#1]{title page header}
+      \hskip2cm\usebeamerfont{title}\inserttitle\par%
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[sep=0cm,dp=0cm,wd=13.2cm,ht=1.2cm,right,#1]{author}
+      \usebeamerfont{author}\insertauthor%
+    \end{beamercolorbox}
+    % \begin{beamercolorbox}[wd=12cm,leftskip=3cm,#1]{date}
+    %   \hskip2cm\usebeamerfont{author}\insertdate%
+    % \end{beamercolorbox}
+  \vfill
+}
+
+% Items
+\setbeamertemplate{items}[square]
+\setbeamertemplate{sections/subsections in toc}[square]
+
+\mode<all>
