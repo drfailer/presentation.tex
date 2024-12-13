@@ -1,0 +1,97 @@
+% example section
+
+\section{\LaTeX template}
+
+\subsection{Lists}
+\begin{frame}
+  \frametitle{\LaTeX template}
+  \framesubtitle{Lists}
+
+  Itemize
+
+  \begin{itemize}
+    \item First entry.
+    \item Second entry.
+    \item Third entry.
+  \end{itemize}
+
+  Enumerate:
+
+  \begin{enumerate}
+    \item First entry.
+    \item Second entry.
+    \item Third entry.
+  \end{enumerate}
+\end{frame}
+
+\subsection{Theorem}
+\begin{frame}
+  \frametitle{\LaTeX template}
+  \framesubtitle{Theorem}
+
+  \begin{theorem}[Example]
+    Here is how theorems are displayed.
+  \end{theorem}
+\end{frame}
+
+\subsection{Images}
+\begin{frame}
+  \frametitle{\LaTeX template}
+  \framesubtitle{Images}
+
+  \begin{minipage}[h!]{0.45\textwidth}
+    \begin{itemize}
+      \item NIST:
+      \begin{itemize}
+        \item Gaithersburg campus.
+      \end{itemize}
+    \end{itemize}
+  \end{minipage}\hfill
+  \begin{minipage}[h!]{0.45\textwidth}
+    \includegraphics[scale=0.2]{./img/example-image.png}
+  \end{minipage}
+\end{frame}
+
+\subsection{Code}
+\begin{frame}[containsverbatim]
+  \frametitle{\LaTeX template}
+  \framesubtitle{Code}
+
+  Displaying code requires pygments !
+
+  \begin{listing}[H]
+    \begin{minted}[frame=lines,framesep=2mm,baselinestretch=1.2,fontsize=\normalsize,linenos]{C++}
+      #include <iostream>
+
+      int main(int, char **) {
+        std::cout << "Hello, World!" << std::endl;
+        return 0;
+      }
+    \end{minted}
+    \caption{Hello world in C}
+  \end{listing}
+
+\end{frame}
+
+\subsection{Table}
+\begin{frame}
+  \frametitle{\LaTeX template}
+  \framesubtitle{Table}
+
+  \begin{center}
+    \begin{table}
+      \begin{tabular}{|c|c|c|c|}
+       \hline
+       \rowcolor{tableFirstRowColor} Col1 & Col2 & Col2 & Col3 \\ [0.5ex]
+       \hline
+       1 & 6 & 87837 & 787 \\
+       \hline
+       2 & 7 & 78 & 5415 \\
+       \hline
+       3 & 545 & 778 & 7507 \\
+       \hline
+      \end{tabular}
+      \caption{Example table}
+    \end{table}
+  \end{center}
+\end{frame}
