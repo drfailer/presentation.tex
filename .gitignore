@@ -1,9 +1,13 @@
+*.pdf
 *.aux
 *.log
 *.nav
 *.out
 *.snm
 *.toc
-*.pdf
 *.vrb
+*.bbl
+*.bcf
+*.blg
+*.run.xml
 _minted-main

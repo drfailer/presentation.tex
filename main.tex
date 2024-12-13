@@ -6,28 +6,36 @@
 \usepackage{minted} % for code highlighting
 \usepackage[table]{xcolor} % for colored tables
 
+% references
+\usepackage[style=ieee, backend=biber, sorting=none, defernumbers=true]{biblatex}
+\addbibresource{refs.bib}
+
 % base informations
 \title{NIST Presentation}
-\date[\today]{\today}
 \author[Author]{Author}
+\date[\today]{\today}
 
 \usetheme{nist}
 
 \begin{document}
 
-\begin{frame}[plain]
-\titlepage
-\end{frame}
+  \begin{frame}[plain]
+    \titlepage
+  \end{frame}
 
-\begin{frame}{Overview}
-\tableofcontents
-\end{frame}
+  \begin{frame}{Overview}
+    \tableofcontents
+  \end{frame}
 
-\import{./sections/}{example}
+  \import{./sections/}{example}
 
-\begin{frame}[plain]
-  \centering
-  \LARGE Thanks !
-\end{frame}
+  \begin{frame}[plain]
+    \centering
+    \LARGE Thanks !
+  \end{frame}
+
+  \begin{frame}[allowframebreaks, noframenumbering]{References}
+    \printbibliography
+  \end{frame}
 
 \end{document}
