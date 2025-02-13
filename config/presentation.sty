@@ -12,3 +12,66 @@
 
 \usefolder{config}
 \usetheme{nist}
+
+% commands
+\newcommand{\titleslide}{
+  \begin{frame}[plain]
+    \titlepage
+  \end{frame}
+}
+
+\newcommand{\overviewslide}[1][Overview]{
+  \begin{frame}{#1}
+    \tableofcontents
+  \end{frame}
+}
+
+\newcommand{\lastslide}[1]{
+  \begin{frame}[plain]
+    \centering
+    \LARGE #1
+  \end{frame}
+}
+
+\newcommand{\bibliographyslide}{
+  \begin{frame}[allowframebreaks, noframenumbering]{References}
+    \printbibliography
+  \end{frame}
+}
+
+\newcommand{\presentationsection}[1]{
+  \def\sectiontitle{#1}
+  \section{\sectiontitle}
+}
+
+\newcommand{\presentationsubsection}[1]{
+  \def\subsectiontitle{#1}
+  \subsection{\subsectiontitle}
+}
+
+\newenvironment{slide}[1]{
+  \begin{frame}[#1]
+}{
+  \end{frame}
+}
+
+\newenvironment{plainslide}[1][plain]{
+  \begin{frame}[#1,plain]
+}{
+  \end{frame}
+}
+
+\newenvironment{sectionslide}[1][1]{
+  \begin{frame}[#1]
+    \frametitle{\sectiontitle}
+}{
+  \end{frame}
+}
+
+\newenvironment{subsectionslide}[1][1]{
+  \begin{frame}[#1]
+    \frametitle{\sectiontitle}
+    \framesubtitle{\subsectiontitle}
+}{
+  \end{frame}
+}

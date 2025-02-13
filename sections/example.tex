@@ -1,15 +1,13 @@
-\def\sectiontitle{\LaTeX template}
+\presentationsection{\LaTeX template}
 
-\section{\sectiontitle}
+\begin{sectionslide}
+  Starting a new section
+\end{sectionslide}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\def\slidetitle{List}
+\presentationsubsection{Lists}
 
-\subsection{\slidetitle}
-\begin{frame}
-  \frametitle{\sectiontitle}
-  \framesubtitle{\slidetitle}
-
+\begin{subsectionslide}
   Itemize
 
   \begin{itemize}
@@ -25,29 +23,21 @@
     \item Second entry.
     \item Third entry.
   \end{enumerate}
-\end{frame}
+\end{subsectionslide}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\def\slidetitle{Theorem}
+\presentationsubsection{Theorem}
 
-\subsection{\slidetitle}
-\begin{frame}
-  \frametitle{\sectiontitle}
-  \framesubtitle{\slidetitle}
-
+\begin{subsectionslide}
   \begin{theorem}[Example]
     Here is how theorems are displayed.
   \end{theorem}
-\end{frame}
+\end{subsectionslide}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\def\slidetitle{Images}
+\presentationsubsection{Images}
 
-\subsection{\slidetitle}
-\begin{frame}
-  \frametitle{\sectiontitle}
-  \framesubtitle{\slidetitle}
-
+\begin{subsectionslide}
   \begin{minipage}[h!]{0.45\textwidth}
     \begin{itemize}
       \item NIST:
@@ -59,16 +49,12 @@
   \begin{minipage}[h!]{0.45\textwidth}
     \includegraphics[scale=0.2]{./img/example-image.png}
   \end{minipage}
-\end{frame}
+\end{subsectionslide}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\def\slidetitle{Code}
+\presentationsubsection{Code}
 
-\subsection{\slidetitle}
-\begin{frame}[containsverbatim]
-  \frametitle{\sectiontitle}
-  \framesubtitle{\slidetitle}
-
+\begin{subsectionslide}[containsverbatim]
   Displaying code requires pygments !
 
   \begin{listing}[H]
@@ -83,15 +69,12 @@
     \caption{Hello world in C}
   \end{listing}
 
-\end{frame}
+\end{subsectionslide}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\def\slidetitle{Table}
+\presentationsubsection{Table}
 
-\subsection{\slidetitle}
-\begin{frame}
-  \frametitle{\sectiontitle}
-  \framesubtitle{\slidetitle}
+\begin{subsectionslide}
 
   \begin{center}
     \begin{table}
@@ -109,18 +92,15 @@
       \caption{Example table}
     \end{table}
   \end{center}
-\end{frame}
+
+\end{subsectionslide}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\def\slidetitle{References}
+\presentationsubsection{References}
 
-\subsection{\slidetitle}
-\begin{frame}
-  \frametitle{\sectiontitle}
-  \framesubtitle{\slidetitle}
-
+\begin{subsectionslide}
   \begin{itemize}
     \item Paper 1 \cite{blattner2017model}
     \item Paper 2 \cite{bardakoff2020hedgehog}
   \end{itemize}
-\end{frame}
+\end{subsectionslide}
