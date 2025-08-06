@@ -39,14 +39,36 @@
   \end{frame}
 }
 
-\newcommand{\presentationsection}[1]{
+\newcommand{\presentationsectionNoStar}[1]{
   \def\sectiontitle{#1}
   \section{\sectiontitle}
 }
 
-\newcommand{\presentationsubsection}[1]{
+\newcommand{\presentationsubsectionNoStar}[1]{
   \def\subsectiontitle{#1}
   \subsection{\subsectiontitle}
+}
+
+\newcommand{\presentationsectionStar}[1]{
+  \def\sectiontitle{#1}
+  \section*{\sectiontitle}
+}
+
+\newcommand{\presentationsubsectionStar}[1]{
+  \def\subsectiontitle{#1}
+  \subsection*{\subsectiontitle}
+}
+
+\newcommand{\presentationsection}[2]{
+  \ifthenelse{\equal{#1}{*}}
+    {\presentationsectionStar{#2}}
+    {\presentationsectionNoStar{#1}}
+}
+
+\newcommand{\presentationsubsection}[2]{
+  \ifthenelse{\equal{#1}{*}}
+    {\presentationsubsectionStar{#2}}
+    {\presentationsubsectionNoStar{#1}}
 }
 
 \newenvironment{slide}[1]{
