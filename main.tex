@@ -6,6 +6,8 @@
 \usepackage[table]{xcolor} % for colored tables
 \usepackage[outputdir=out]{minted} % for code highlighting (warn: update the build directory when changing it in the makefile)
 \usepackage{config/presentation}
+\usepackage{appendixnumberbeamer}
+\usepackage{subcaption}
 
 % references
 \usepackage[style=ieee, backend=biber, sorting=none, defernumbers=true]{biblatex}
@@ -27,5 +29,8 @@
   \lastslide{Thanks !}
 
   \bibliographyslide
+
+  \appendix
+  \import{./sections/}{backup}
 
 \end{document}
